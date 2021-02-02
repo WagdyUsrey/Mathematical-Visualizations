@@ -59,4 +59,9 @@ def drowFib(numbers, color='blue', shape='arrow', pensize=3, speed=50, step=15, 
     time.sleep(2)
 
 
-# drowFib(13)
+if __name__ == '__main__':
+    main()
+
+
+def main():
+    drowFib(13)
