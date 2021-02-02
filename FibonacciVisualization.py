@@ -20,7 +20,7 @@ def fib(x, d=None):
     return d[x]
 
 
-def drowFib(numbers, color='blue', shape='arrow', pensize=3, speed=50, step=15, fibsteps=500):
+def drowFib(numbers, color='blue', shape='arrow', pensize=3, speed=50, step=15, fibsteps=500, start=(0, 0)):
     '''
     this function visualize the modulus of the Fibonacci Series over a number
     nembers is one number or list of numbers
@@ -38,10 +38,10 @@ def drowFib(numbers, color='blue', shape='arrow', pensize=3, speed=50, step=15, 
         t.pensize(pensize)
         t.shape(shape)
         t.speed(speed)
+        t.penup()
+        t.goto(start[0], start[1])
+        t.pendown()
         # t.right(135)
-        # t.penup()
-        # t.goto(-(1366/2), 0)
-        # t.pendown()
 
     for number in range(0, fibsteps):
         f = fib(number)
@@ -57,6 +57,6 @@ def drowFib(numbers, color='blue', shape='arrow', pensize=3, speed=50, step=15, 
                 turtles[index].left(90)
                 turtles[index].forward(step)
     time.sleep(2)
-# drowFib(27)
 
 
+# drowFib(13)
